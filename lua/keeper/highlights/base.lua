@@ -59,8 +59,8 @@ function M.get(c)
     WarningMsg = { fg = c.war },
     MsgArea    = { fg = c.fg3, bg = c.bg0 },
 
-    Search     = { fg = c.fg0, bg = c.bg3 },
-    IncSearch  = { fg = c.bg0, bg = c.fg0 },
+    Search     = { fg = c.bg0, bg = c.fg1 },
+    IncSearch  = { fg = c.bg0, bg = c.acc0 },
     CurSearch  = "IncSearch",
     Substitute = "IncSearch",
 

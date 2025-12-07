@@ -3,8 +3,8 @@ local M = {}
 ---@param c keeper.ColorMap
 function M.get(c)
   return {
-    ["@none"]           = { fg = c.fg0 },
-    ["@text"]           = { fg = c.fg0 },
+    ["@none"]           = { fg = c.foreground },
+    ["@text"]           = { fg = c.foreground },
     ["@text.emphasis"]  = "Emph",
     ["@text.strike"]    = "Strike",
     ["@text.underline"] = "Underline",
@@ -20,7 +20,7 @@ function M.get(c)
     ["@annotation"]    = "PreProc",
 
     ["@module"]         = "Include",
-    ["@module.odin"]    = { fg = c.acc1, bold = true },
+    ["@module.odin"]    = { fg = c.accent_alt, bold = true },
     ["@module.builtin"] = "SpecialChar",
 
     ["@variable"]                   = "Variable",
@@ -36,7 +36,7 @@ function M.get(c)
     ["@type.qualifier"]  = "Keyword",
 
     ["@exception"] = "Exception",
-    ["@namespace"] = { fg = c.typ },
+    ["@namespace"] = { fg = c.type },
     ["@label"]     = "Label",
 
     ["@keyword"]              = "Keyword",
@@ -49,12 +49,12 @@ function M.get(c)
     ["@conditional"]         = "Conditional",
     ["@conditional.ternary"] = "Operator",
 
-    ["@field"]     = { fg = c.fg0 },
-    ["@property"]  = { fg = c.fg0 },
-    ["@parameter"] = { fg = c.fg0 },
+    ["@field"]     = { fg = c.foreground },
+    ["@property"]  = { fg = c.foreground },
+    ["@parameter"] = { fg = c.foreground },
 
     ["@function"]         = "Function",
-    ["@function.builtin"] = { fg = c.fg2, italic = true },
+    ["@function.builtin"] = { fg = c.foreground_light, italic = true },
     ["@function.macro"]   = "Macro",
 
     ["@storageclass"]           = "Keyword",

@@ -3,12 +3,12 @@ local M = {}
 ---@param c keeper.ColorMap
 function M.get(c)
   return {
-    GitSignsAdd          = { fg = c.add },
-    GitSignsChange       = { fg = c.mod },
+    GitSignsAdd          = { fg = c.added },
+    GitSignsChange       = { fg = c.modified },
     GitSignsChangeDelete = "GitSignsChange",
-    GitSignsDelete       = { fg = c.rem },
+    GitSignsDelete       = { fg = c.removed },
     GitSignsTopDelete    = "GitSignsDelete",
-    GitSignsUntracked    = { fg = c.fg1 },
+    GitSignsUntracked    = { fg = c.foreground_muted },
   }
 end
 

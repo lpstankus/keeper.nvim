@@ -3,17 +3,17 @@ local M = {}
 ---@param c keeper.ColorMap
 function M.get(c)
   return {
-    MiniStatuslineDevinfo     = { fg = c.bg0, bg = c.bg3 },
-    MiniStatuslineFileinfo    = { fg = c.bg0, bg = c.bg3 },
-    MiniStatuslineFilename    = { fg = c.fg3, bg = c.bg2, bold = true },
+    MiniStatuslineDevinfo     = { fg = c.background, bg = c.background_ui },
+    MiniStatuslineFileinfo    = { fg = c.background, bg = c.background_ui },
+    MiniStatuslineFilename    = { fg = c.foreground_lighter, bg = c.background_secondary, bold = true },
 
-    MiniStatuslineModeNormal  = { fg = c.bg0, bg = c.mod, bold = true },
-    MiniStatuslineModeInsert  = { fg = c.bg0, bg = c.suc, bold = true },
-    MiniStatuslineModeVisual  = { fg = c.bg0, bg = c.acc0, bold = true },
-    MiniStatuslineModeReplace = { fg = c.bg0, bg = c.rem, bold = true },
-    MiniStatuslineModeCommand = { fg = c.bg0, bg = c.acc1, bold = true },
+    MiniStatuslineModeNormal  = { fg = c.background, bg = c.modified, bold = true },
+    MiniStatuslineModeInsert  = { fg = c.background, bg = c.success, bold = true },
+    MiniStatuslineModeVisual  = { fg = c.background, bg = c.accent, bold = true },
+    MiniStatuslineModeReplace = { fg = c.background, bg = c.removed, bold = true },
+    MiniStatuslineModeCommand = { fg = c.background, bg = c.accent_alt, bold = true },
 
-    MiniStatuslineInactive    = { fg = c.fg0, bg = c.bg1 },
+    MiniStatuslineInactive    = { fg = c.foreground, bg = c.background_alt },
   }
 end
 

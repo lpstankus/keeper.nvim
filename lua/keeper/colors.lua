@@ -1,46 +1,46 @@
 ---@class keeper.TermColors
 local term = {
-  black   = "#666666",
-  red     = "#C03B3B",
-  green   = "#2EC09C",
-  yellow  = "#E7C547",
-  blue    = "#7AA6FF",
-  magenta = "#D4BFFF",
-  cyan    = "#7AD0C6",
-  white   = "#E8DCCB",
+	black = "#666666",
+	red = "#C03B3B",
+	green = "#2EC09C",
+	yellow = "#E7C547",
+	blue = "#7AA6FF",
+	magenta = "#D4BFFF",
+	cyan = "#7AD0C6",
+	white = "#E8DCCB",
 }
 
 ---@class keeper.ColorMap
-local colors =  {
-  bg0 = "#08141E",
-  bg1 = "#141E2C",
-  bg2 = "#1F273A",
-  bg3 = "#30394F",
-  bg4 = "#292831",
+local colors = {
+	background = "#000000",
+	background_ui = "#30394F",
+	background_alt = "#141E2C",
+	background_secondary = "#1F273A",
+	background_tertiary = "#292831",
 
-  fg0 = "#D2BAA7",
-  fg1 = "#997577",
-  fg2 = "#F6D6BD",
-  fg3 = "#FFECD6",
+	foreground = "#D2BAA7",
+	foreground_light = "#F6D6BD",
+	foreground_lighter = "#FFECD6",
+	foreground_muted = "#997577",
 
-  typ = "#FFD4A3",
+	type = "#FFD4A3",
 
-  alt0 = "#4E495F",
-  alt1 = "#816271",
+	neutral = "#4E495F",
+	neutral_alt = "#816271",
 
-  acc0 = "#FFAA5E",
-  acc1 = "#D08159",
+	accent = "#FFAA5E",
+	accent_alt = "#D08159",
 
-  add = "#78B392",
-  mod = "#5D8BB3",
-  rem = "#BF2651",
+	added = "#78B392",
+	modified = "#5D8BB3",
+	removed = "#BF2651",
 
-  err = "#BF2651",
-  war = "#FF8766",
-  suc = "#78B392",
-  hin = "#5D8BB3",
+	error = "#BF2651",
+	warning = "#FF8766",
+	success = "#78B392",
+	hint = "#5D8BB3",
 
-  term = term,
+	term = term,
 }
 
 return { colors = colors }

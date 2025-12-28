@@ -8,7 +8,7 @@ function M.get(c)
     GitSignsChangeDelete = "GitSignsChange",
     GitSignsDelete       = { fg = c.removed },
     GitSignsTopDelete    = "GitSignsDelete",
-    GitSignsUntracked    = { fg = c.foreground_muted },
+    GitSignsUntracked    = { fg = c.foreground_punct },
   }
 end
 

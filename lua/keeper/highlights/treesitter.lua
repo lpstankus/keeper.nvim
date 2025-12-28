@@ -20,7 +20,7 @@ function M.get(c)
     ["@annotation"]    = "PreProc",
 
     ["@module"]         = "Include",
-    ["@module.odin"]    = { fg = c.accent_alt, bold = true },
+    ["@module.odin"]    = { fg = c.accent_str, bold = true },
     ["@module.builtin"] = "SpecialChar",
 
     ["@variable"]                   = "Variable",
@@ -36,7 +36,7 @@ function M.get(c)
     ["@type.qualifier"]  = "Keyword",
 
     ["@exception"] = "Exception",
-    ["@namespace"] = { fg = c.type },
+    ["@namespace"] = { fg = c.accent_type },
     ["@label"]     = "Label",
 
     ["@keyword"]              = "Keyword",
@@ -54,7 +54,7 @@ function M.get(c)
     ["@parameter"] = { fg = c.foreground },
 
     ["@function"]         = "Function",
-    ["@function.builtin"] = { fg = c.foreground_light, italic = true },
+    ["@function.builtin"] = { fg = c.foreground_fields, italic = true },
     ["@function.macro"]   = "Macro",
 
     ["@storageclass"]           = "Keyword",

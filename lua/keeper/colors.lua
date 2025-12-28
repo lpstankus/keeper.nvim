@@ -12,33 +12,34 @@ local term = {
 
 ---@class keeper.ColorMap
 local colors = {
-	background = "#000000",
-	background_ui = "#30394F",
-	background_alt = "#141E2C",
-	background_secondary = "#1F273A",
-	background_tertiary = "#292831",
+	background           = "#000000",
+	background_alt       = "#130208",
+	background_secondary = "#2D041C",
+	background_tertiary  = "#5a2f46",
+	background_ui        = "#460E2B",
 
-	foreground = "#D2BAA7",
-	foreground_light = "#F6D6BD",
-	foreground_lighter = "#FFECD6",
-	foreground_muted = "#997577",
+	foreground          = "#f9d9d3",
+	foreground_punct    = "#e9c9cd",
+	foreground_fields   = "#fff4f0",
+	foreground_function = "#fff4f0",
 
-	type = "#FFD4A3",
+	muted_comments = "#A96687",
+	muted_conceal  = "#8A4E6A",
 
-	neutral = "#4E495F",
-	neutral_alt = "#816271",
+	accent      = "#FF8274",
+	accent_cte  = "#FF998D",
+	accent_type = "#FF6B6C",
+	accent_key  = "#D53C6A",
+	accent_str  = "#E25A73",
 
-	accent = "#FFAA5E",
-	accent_alt = "#D08159",
+	added    = "#7C183C",
+	modified = "#D53C6A",
+	removed  = "#D53C6A",
 
-	added = "#78B392",
-	modified = "#5D8BB3",
-	removed = "#BF2651",
-
-	error = "#BF2651",
-	warning = "#FF8766",
-	success = "#78B392",
-	hint = "#5D8BB3",
+	error   = "#D53C6A",
+	warning = "#FF8274",
+	success = "#7C183C",
+	hint    = "#460E2B",
 
 	term = term,
 }

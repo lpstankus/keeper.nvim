@@ -1,6 +1,6 @@
 local M = {}
 
----@param c shared.ColorMap
+---@param c keeper.ColorMap
 function M.get(c)
   return {
     NoiceCmdlinePopup             = { fg = c.foreground },

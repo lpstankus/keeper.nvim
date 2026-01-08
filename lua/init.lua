@@ -16,22 +16,30 @@ local M = {}
 ---@field background_alt string
 ---@field background_secondary string
 ---@field background_tertiary string
+---
 ---@field foreground string
----@field foreground_light string
----@field foreground_lighter string
----@field foreground_muted string
----@field type string
----@field neutral string
----@field neutral_alt string
+---@field foreground_puct string
+---@field foreground_fields string
+---@field foreground_function string
+---
+---@field muted_comments string
+---@field muted_conceal string
+---
 ---@field accent string
----@field accent_alt string
+---@field accent_cte string
+---@field accent_type string
+---@field accent_key string
+---@field accent_str string
+---
 ---@field added string
 ---@field modified string
 ---@field removed string
+---
 ---@field error string
 ---@field warning string
 ---@field success string
 ---@field hint string
+---
 ---@field term shared.TermColors
 
 ---@param theme_name string The name of the theme to load

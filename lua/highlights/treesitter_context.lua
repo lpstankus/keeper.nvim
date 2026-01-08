@@ -1,11 +1,11 @@
 
 local M = {}
 
----@param c shared.ColorMap
+---@param c keeper.ColorMap
 function M.get(c)
   return {
     TreesitterContext           = { bg = c.background_alt },
-    TreesitterContextLineNumber = { fg = c.foreground_muted, bg = c.background_alt, bold = true },
+    TreesitterContextLineNumber = { fg = c.foreground_punct, bg = c.background_alt, bold = true },
     TreesitterContextSeparator  = "TreesitterContext",
   }
 end

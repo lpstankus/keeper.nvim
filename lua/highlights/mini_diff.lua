@@ -1,6 +1,6 @@
 local M = {}
 
----@param _ shared.ColorMap
+---@param _ keeper.ColorMap
 function M.get(_)
   return {
     MiniDiffSignAdd        = "DiffAdd",

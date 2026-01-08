@@ -62,30 +62,31 @@ end
 local function get_group(buf)
   local fname = vim.api.nvim_buf_get_name(buf or 0)
   fname = vim.fs.normalize(fname)
-  if not fname:find("lua/keeper/highlights/") then return end
+  if not fname:find("lua/shared/highlights/") then return end
   return vim.fn.fnamemodify(fname, ":t:r")
 end
 
 local function load(group)
   if cache[group] then return end
   cache[group] = {}
-  colors = require("keeper.colors").colors
-  local highlights = require("keeper.highlights." .. group).get(colors)
+  local theme_name = vim.g.colors_name
+  colors = require("colors").load(theme_name)
+  local highlights = require("shared.highlights." .. group).get(colors)
   for k, v in pairs(highlights) do
     cache[group][k] = get_hl_group(v)
   end
 end
 
 vim.api.nvim_create_autocmd("BufWritePost", {
-  group = vim.api.nvim_create_augroup("keeper_dev", { clear = true }),
-  pattern = "*/lua/keeper/**.lua",
+  group = vim.api.nvim_create_augroup("theme_dev", { clear = true }),
+  pattern = "*/lua/**.lua",
   callback = vim.schedule_wrap(function(ev)
     for k in pairs(package.loaded) do
-      if k:find("^keeper") then
+      if k:find("^(init|colors|groups|shared)") then
         package.loaded[k] = nil
       end
     end
-    require("keeper").load()
+    require("init").load()
     vim.cmd.colorscheme(vim.g.colors_name)
     hl_groups = {}
     local hi = require("mini.hipatterns")
@@ -102,7 +103,7 @@ return {
     "echasnovski/mini.hipatterns",
     opts = function(_, opts)
       opts.highlighters = opts.highlighters or {}
-      opts.highlighters.keeper = {
+      opts.highlighters.theme_highlights = {
         pattern = function(buf)
           local group = get_group(buf)
           if not group or group == "init" then return end
@@ -117,14 +118,15 @@ return {
         extmark_opts = { priority = 2000 },
       }
 
-      opts.highlighters.keeper_colors = {
+      opts.highlighters.theme_colors = {
         pattern = { "%f[%w]()t%.[%w_%.]+()%f[%W]" },
         group = function(_, match)
           local parts = vim.split(match, ".", { plain = true })
           local t = _G --[[@as table]]
           if parts[1]:sub(1, 1) == "t" then
             table.remove(parts, 1)
-            colors = require("keeper.colors").colors
+            local theme_name = vim.g.colors_name
+            colors = require("colors").load(theme_name)
             t = colors
           end
           local color = vim.tbl_get(t, unpack(parts))

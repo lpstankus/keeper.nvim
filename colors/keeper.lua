@@ -1,1 +1,1 @@
-require("keeper").load()
+require("init").load("keeper")

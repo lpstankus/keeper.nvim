@@ -1,6 +1,6 @@
 local M = {}
 
----@param c keeper.ColorMap
+---@param c shared.ColorMap
 function M.get(c)
   return {
     MiniStatuslineDevinfo     = { fg = c.background, bg = c.background_ui },

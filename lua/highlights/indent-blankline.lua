@@ -1,6 +1,6 @@
 local M = {}
 
----@param c keeper.ColorMap
+---@param c shared.ColorMap
 function M.get(c)
   return {
     IblScope                   = { fg = c.foreground_muted, nocombine = true },

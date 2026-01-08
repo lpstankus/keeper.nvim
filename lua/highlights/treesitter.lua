@@ -1,6 +1,6 @@
 local M = {}
 
----@param c keeper.ColorMap
+---@param c shared.ColorMap
 function M.get(c)
   return {
     ["@none"]           = { fg = c.foreground },

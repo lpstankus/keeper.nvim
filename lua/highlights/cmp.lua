@@ -1,6 +1,6 @@
 local M = {}
 
----@param c keeper.ColorMap
+---@param c shared.ColorMap
 function M.get(c)
   return {
     CmpItemKind               = { fg = c.background, bg = c.neutral, bold = true },

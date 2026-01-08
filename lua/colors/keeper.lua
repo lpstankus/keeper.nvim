@@ -1,4 +1,4 @@
----@class keeper.TermColors
+---@class shared.TermColors
 local term = {
 	black = "#666666",
 	red = "#C03B3B",
@@ -10,8 +10,8 @@ local term = {
 	white = "#E8DCCB",
 }
 
----@class keeper.ColorMap
-local colors = {
+---@class shared.ColorMap
+return {
 	background = "#000000",
 	background_ui = "#30394F",
 	background_alt = "#141E2C",
@@ -42,5 +42,3 @@ local colors = {
 
 	term = term,
 }
-
-return { colors = colors }

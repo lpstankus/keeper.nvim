@@ -1,6 +1,6 @@
 local M = {}
 
----@param c keeper.ColorMap
+---@param c shared.ColorMap
 function M.get(c)
   return {
     IblScope                   = { fg = c.accent_key, nocombine = true },

@@ -1,7 +1,6 @@
-
 local M = {}
 
----@param c keeper.ColorMap
+---@param c shared.ColorMap
 function M.get(c)
   return {
     TreesitterContext           = { bg = c.background_alt },

@@ -18,7 +18,7 @@ local M = {}
 ---@field background_tertiary string
 ---
 ---@field foreground string
----@field foreground_puct string
+---@field foreground_punct string
 ---@field foreground_fields string
 ---@field foreground_function string
 ---

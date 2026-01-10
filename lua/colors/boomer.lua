@@ -1,13 +1,13 @@
 ---@class shared.TermColors
 local term = {
   black   = "#1a1a1a",
-  red     = "#d68a70",
-  green   = "#8ad670",
-  yellow  = "#d6c070",
-  blue    = "#70a0d6",
-  magenta = "#c070d6",
-  cyan    = "#70d6b8",
-  white   = "#e0e0e0",
+  red     = "#a86a5a",
+  green   = "#6aa860",
+  yellow  = "#a8985a",
+  blue    = "#6a80a8",
+  magenta = "#9860a0",
+  cyan    = "#60a090",
+  white   = "#a0a0a0",
 }
 
 ---@class shared.ColorMap
@@ -18,28 +18,28 @@ return {
   background_secondary = "#252525",
   background_tertiary  = "#4A4A4A",
 
-  foreground           = "#D0D0D0",
-  foreground_punct     = "#A0A0A0",
-  foreground_fields    = "#C0C0C0",
-  foreground_function  = "#C0C0C0",
+  foreground           = "#C0C0C0",
+  foreground_punct     = "#808080",
+  foreground_fields    = "#C8C8C8",
+  foreground_function  = "#F0F0F0",
 
-  muted_comments       = "#606060",
-  muted_conceal        = "#505050",
+  muted_comments       = "#505050",
+  muted_conceal        = "#404040",
 
-  accent               = "#909090",
-  accent_cte           = "#6A90C8",
-  accent_type          = "#808080",
-  accent_key           = "#707070",
-  accent_str           = "#6A90C8",
+  accent               = "#B0B0B0",
+  accent_cte           = "#78A0B8",
+  accent_type          = "#888888",
+  accent_key           = "#606060",
+  accent_str           = "#78A0B8",
 
-  added                = "#404040",
-  modified             = "#505050",
-  removed              = "#606060",
+  added                = term.green,
+  modified             = term.yellow,
+  removed              = term.red,
 
-  error                = "#606060",
-  warning              = "#707070",
-  success              = "#505050",
-  hint                 = "#585858",
+  error                = "#907075",
+  warning              = "#908a60",
+  success              = "#609070",
+  hint                 = "#608590",
 
   term                 = term
 }

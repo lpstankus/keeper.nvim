@@ -12,16 +12,16 @@ local term = {
 
 ---@class shared.ColorMap
 return {
-	background           = "#000000",
+	background           = "#08141E",
 	background_ui        = "#30394F",
 	background_alt       = "#141E2C",
 	background_secondary = "#1F273A",
 	background_tertiary  = "#292831",
 
 	foreground           = "#D2BAA7",
-	foreground_light     = "#F6D6BD",
-	foreground_lighter   = "#FFECD6",
-	foreground_muted     = "#997577",
+	foreground_punct     = "#997577",
+	foreground_fields    = "#F6D6BD",
+	foreground_function  = "#FFECD6",
 
 	muted_comments       = "#816271",
 	muted_conceal        = "#4E495F",
